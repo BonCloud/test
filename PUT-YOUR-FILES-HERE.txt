@@ -1,0 +1,243 @@
+TURN CINEMATIC: your files
+==========================
+
+Everything in this folder can be replaced. Either overwrite the file with the
+same name, or put yours anywhere and point the setting at it
+(Configure Settings > Turn Cinematic). File names are case-sensitive on
+Linux and hosted servers, so keep stamp-D.png with a capital D.
+
+
+BACKGROUND VIDEOS AND FACTION SOUNDS  (you supply these, none are included)
+
+  prophet.webm      prophet.mp3
+  (angel)           angel.mp3
+  liquidator.webm   liquidator.mp3
+  survivor.webm     survivor.mp3
+
+  Video: .webm. It plays muted and loops, so sound comes from the audio file.
+  Audio: .mp3 or .ogg. Foundry v13 no longer accepts .webm in audio pickers.
+  A missing video falls back to a plain colored band. A missing sound is silent.
+  The Angel has no band or video (it floats straight over the game), so it
+  only needs its sound.
+
+
+THE ANGEL'S PICTURES  (placeholders are included; replace them with your art)
+
+  angel-wing.png    A transparent PNG of the RIGHT wing.
+                    Draw it with the shoulder (where it joins the body) on the
+                    LEFT edge, vertically centered. The left wing is the same
+                    picture flipped. If your art has two different wings, set
+                    "Angel: left wing image" in settings and the left one will
+                    be used as it is, not flipped.
+                    Roughly 1000 x 1000 works well; the shape can be anything.
+
+  angel-halo.png    A square transparent PNG, drawn centered. It turns slowly
+                    behind the portrait. Higher grades stack more copies,
+                    bigger and turning the other way.
+
+  angel-hands.png   A transparent PNG of arms and hands reaching UP, cut off
+                    flat along the bottom edge (that edge sits on the bottom
+                    of the screen). Grades B and A reach in from the two bottom
+                    corners, in front of everything except the stamp. They are mirrored
+                    so they lean toward the middle; turn "lean toward the
+                    middle" off in settings to use the picture as drawn.
+                    If you leave it empty, the hands are simply left out.
+
+  stamp-D.png       The grade stamps: square transparent PNGs, one per grade.
+  stamp-C.png       They are thrown onto the screen under the
+                    Angel's name, land with a thud and
+  stamp-B.png       flung ink, then settle as a print. If a stamp file is
+  stamp-A.png       missing, a plain drawn stamp with the grade letter is used.
+
+  stamp.ogg         The sound of the stamp landing (.ogg or .mp3).
+
+  If your art doesn't line up, you don't need to edit anything: use the
+  "wing size", "wing distance from center", "wing height", "halo size",
+  "reaching hands size" and "stamp size" sliders in the module settings.
+
+
+THE PROPHET'S PICTURES  (placeholders are included; replace them with your art)
+
+  The Prophet has two looks, chosen in settings under "Prophet: look":
+  Biblical (the default, built from the three pictures below) and Hunted (the
+  typed report with a reticle, which needs no pictures).
+
+  prophet-seal.png       A square transparent PNG of the seal (the wax part),
+                         drawn centered. The portrait is placed in the MIDDLE
+                         of it, so leave a round space there, about 45% of the
+                         picture's width. 1300 x 1300 is plenty. It is
+                         slammed down first, then the rest follows.
+
+  prophet-parchment.png  A WIDE transparent PNG of the strip or scroll, longer
+                         than it is tall (the included one is 2400 x 440).
+                         It lies behind the seal and unrolls from the seal
+                         to the right, like the other factions' bands. The
+                         picture is stretched to fit the strip, so any wide
+                         shape works. Its LEFT end is hidden under the seal,
+                         so put nothing important there; the RIGHT end is
+                         the torn or rolled edge people see. The name is
+                         written on it in dark ink: "PROPHET" small on top,
+                         the name under it.
+
+  prophet-rays.png       A square transparent PNG of rays of light, drawn
+                         centered on the seal and behind everything. It is
+                         drawn very large (about two and a half screens high),
+                         so make it big, 2000 x 2000 or more.
+
+  There is no background picture behind the Prophet: only a light, dark-purple
+  tint over the game (turn it off with "Prophet: darken the screen behind"),
+  so the game stays visible. The Prophet's video (prophet.webm) is not used
+  by this look (the Hunted look still uses it). The seal sits toward the left
+  of the screen and slams down first; then the strip unrolls from it to the
+  right with the name on it. If a picture is missing it is simply left out;
+  with no parchment the name turns light so it can still be read. Long names
+  shrink to fit the strip.
+
+  If your art doesn't line up, use the "Prophet seal size", "Prophet parchment
+  thickness", "Prophet rays size" and "Prophet name height" sliders in
+  settings. "Prophet position across the screen" moves the seal (and so the
+  whole strip) left or right (17 is the default, 50 is the middle).
+
+  If you replaced the old tall parchment with your own picture: it is now
+  stretched along a wide strip, so a tall picture will look squashed. Use a
+  wide one.
+
+
+WHAT EACH GRADE ADDS (Angels)
+
+  D   a halo, the stamp
+  C   + a pair of wings, ash, rot-green light
+  B   + a second halo, two clusters of hands reaching in from the
+      bottom corners, flashes and a shaking
+      screen, the name splits into red and blue
+  A   + a second pair of wings, a third halo, bigger hands, a heartbeat,
+      a hard-hitting stamp with an aftershock, a name that tears
+
+TURN ORDER (no files needed, all in Configure Settings > Turn Cinematic)
+
+  Turn order: "Activation" (the default) replaces initiative. Each round the
+  sides take turns, ENEMY FIRST, then a friendly, then an enemy, and so on
+  until everyone has gone. If one side has more fighters than the other, the
+  bigger side plays out the rest of its fighters, one after another, once the
+  smaller side has had all of its turns.
+    - Enemy = a token whose disposition is Hostile. Everyone else (friendly,
+      neutral, and any character a player owns) is a friendly.
+    - Nobody rolls initiative. The module writes numbers into the combat
+      tracker so it shows the order, and the tracker's own Next Turn button
+      just works. You can still drag people in the tracker; they keep their
+      place within their side.
+    - Defeated fighters go to the bottom and are skipped.
+    - PICKING WHO GOES NEXT: in the combat tracker, a green play button
+      appears on the right of a fighter's row when they can go next. When the
+      enemy's turn comes up, only enemies who haven't gone yet have the
+      button (never a friendly); when a friendly's turn comes up, only
+      friendlies who haven't gone have it (never an enemy). Pressing it ends
+      the current turn and starts that fighter's turn, with their cinematic.
+      The fallen never have it. When the other side has nobody left, the
+      button is on the rest of the side that is still standing.
+      Press Next Turn instead and the top fighter of the side whose turn it
+      is goes (so the Next Turn button still works on its own).
+    - The GM can press the button on anyone who is up. A player sees it only
+      on their own characters, and their press is carried out by the GM's
+      computer, so the GM has to be logged in.
+    - Whoever opens a round is the first enemy in the tracker: the round
+      starts the moment the last turn of the old one ends. (Drag the enemies
+      in the tracker to change who that is.)
+    - The order is lined up the moment fighters are added to the combat
+      tracker (you don't have to start the fight first), and again when
+      someone joins or leaves, or a token changes sides. Fighters who have
+      already gone this round never move.
+    - The combat tracker shows it: the number on the right of each row is the
+      activation order (not an initiative number), the row's edge is red for
+      an enemy and blue for a friendly, fighters who have gone are dimmed,
+      the fallen show a cross, and a line at the top says which side goes
+      next. The "roll initiative" buttons are hidden, because nobody rolls.
+    - Choose "Initiative" in the same setting to go back to Foundry's normal
+      order and tracker; the kill cinematics and the ping still work there.
+
+MAP PING (setting: "Ping the token whose turn it is")
+
+  When a turn starts, once its cinematic has finished, the GM's computer
+  pings that fighter's token on the map, so everyone can see who it is.
+    - "Ping the token" (the default) is the normal pulsing ping. "Ping and
+      pull" also moves everyone's view to the token. "Off" turns it off.
+    - Only the GM's computer pings (Foundry shows it to everybody), so it is
+      not repeated once per player. The GM has to be logged in.
+    - Hidden fighters and hidden tokens are never pinged. A fighter with no
+      faction has no cinematic, so its token is pinged straight away.
+    - Players only see a ping where their characters can see.
+    - If the turn has already moved on before the cinematic ends, there is
+      no ping for the skipped turn.
+
+THE KILL PICTURES  (placeholders are included; replace them with your art)
+
+  killed-stamp.gif   The KILLED picture that lands on a killed enemy. It is
+                     shown exactly as it is: a GIF (animated or not) or a
+                     PNG, any width and height; the included one is an
+                     animated GIF, 1000 x 460, that flickers and glitches
+                     in a loop. It is drawn about a third of the screen
+                     wide, tilted a little (-7 degrees, leaning left; set
+                     "Kill stamp tilt" to 0 for none) and slammed down. A GIF
+                     can only be fully see-through or fully solid, so give
+                     it hard edges. If you empty the setting, or the file
+                     is missing, nothing is shown in its place.
+                     If your file has another name, point the "Kill: KILLED
+                     picture" setting at it.
+
+  blood-1.png        Four blood textures: transparent PNGs, square works well
+  blood-2.png        (the included ones are 1024 x 1024). Nine splatters are
+  blood-3.png        thrown onto the screen just before the picture lands,
+  blood-4.png        and each one picks one of the four at random, at a
+                     random turn and size, mirrored half of the time. The
+                     first, big one under the picture uses the first texture
+                     that is set. The included ones are: 1 a big splat with
+                     flung droplets, 2 a spray of droplets, 3 a pool with
+                     round splashes, 4 a smear with a fine mist. They are
+                     drawn in dark red; yours can be any color.
+                     Leave a texture's setting empty to use fewer than four
+                     (leave all four empty for no blood). A texture whose
+                     file is missing is simply left out.
+
+  Black edges around the blood: some blood pictures hold a thin dark fringe
+  around each splat, or a nearly invisible dark box around the whole picture,
+  that looks fine in an image viewer but shows as a black border over the game.
+  The setting "Kill: clean dark edges off the blood" (on by default, in your own
+  settings) cleans that up when the pictures load: the barely visible pixels are
+  removed, the partly see-through edge takes the color of the solid blood next
+  to it, and a picture with no transparency at all on a black background has
+  the black made see-through. It works on a copy in memory; your files are never
+  changed. Turn it off to see the pictures exactly as they are.
+
+  Sliders: "Kill stamp size", "Kill stamp tilt" and "Kill blood size".
+
+KILL CINEMATICS (settings: "Kill cinematics", "Kill cinematic length")
+
+  The moment an enemy is defeated, killed or removed, they get a short
+  cinematic of their own: their faction's look, the color drained out of it,
+  their name struck through, blood splattered across the screen, and your KILLED picture
+  stamped across it with a thud.
+    - What counts: the defeated box ticked on the combat tracker, the "dead"
+      status put on their token, their token deleted from the scene, or them
+      taken out of the combat tracker. It plays on everyone's screen at once,
+      interrupting whatever is showing.
+    - If several fall together (an area attack), they play one after another.
+      Pressing Next Turn doesn't cut in: the next turn's cinematic waits
+      until they've finished.
+    - Each enemy gets one. Marking them defeated and then deleting the token
+      afterwards doesn't play it twice. If you bring them back and they fall
+      again, it plays again.
+    - Who: enemies only (hostile tokens). Friends and player characters never
+      get one. Enemies with no faction set are skipped. Enemies you've hidden
+      are not shown to players. It only happens while a fight is running.
+    - The blood comes from the four blood pictures above; every kill throws
+      it a little differently. With "Lite" mode on there is less of it.
+    - Click a kill cinematic to skip it.
+    - The thud is "Kill sound" in the settings (it uses the Angel's stamp
+      sound by default; replace it or empty it for silence).
+    - Each player can turn this off for themselves.
+
+Fonts are bundled in the fonts folder (see LICENSES.txt there).
+
+The Angel's background: it has no band, video or borders. The only thing
+behind it is a dark, tinted wash over the whole screen (deep red at the
+higher grades). Turn off "Angel: darken the screen behind" to remove that too.

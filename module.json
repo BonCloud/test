@@ -1,0 +1,22 @@
+{
+  "id": "turn-cinematic",
+  "title": "Turn Cinematic",
+  "description": "Turns run by activation (the enemy goes first, then a friendly, and so on) instead of initiative, shown in the combat tracker with a button on each fighter who can go next, and the token whose turn it is gets pinged on the map. An enemy who falls or is removed gets a kill cinematic the moment it happens, with blood and a KILLED picture (a GIF, and four blood textures, that you can replace). Give characters a faction (Prophet, Angel, Liquidator or Survivor). When it becomes their turn in combat, a cinematic plays: faction background video, their portrait, their name, and a faction sound. Each faction has its own composition and typeface (the Prophet's seal, parchment and rays are pictures you can replace; the parchment unrolls from the seal across the screen); Angels float straight over the game, as horrors with grades D-C-B-A: stamped onto the screen, with wings and halos, and hands reaching in at the top grades.",
+  "version": "0.15.2",
+  "authors": [
+    {
+      "name": "You"
+    }
+  ],
+  "compatibility": {
+    "minimum": "13",
+    "verified": "13"
+  },
+  "esmodules": [
+    "scripts/main.js"
+  ],
+  "styles": [
+    "styles/turn-cinematic.css"
+  ],
+  "socket": true
+}
